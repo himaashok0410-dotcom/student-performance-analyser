@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Performance Analyzer</h1>
+
+        <!-- Add Student Section -->
+        <div class="card">
+            <h2>Add Student</h2>
+
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="number" id="maths" placeholder="Maths Marks">
+            <input type="number" id="science" placeholder="Science Marks">
+            <input type="number" id="english" placeholder="English Marks">
+
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <!-- Search Student Section -->
+        <div class="card">
+            <h2>Search Student</h2>
+
+            <input type="text" id="searchName" placeholder="Enter Student Name">
+            <button onclick="searchStudent()">Search</button>
+
+            <div id="result"></div>
+        </div>
+
+        <!-- Class Average Section -->
+        <div class="card">
+            <h2>Class Average</h2>
+            <button onclick="classAverage()">Show Class Average</button>
+            <div id="classAvg"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
