@@ -3,43 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Performance Analyzer</title>
+    <title>Student Performance Analyzer - BMSCE</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Load Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
     <div class="container">
 
-        <h1>Student Performance Analyzer</h1>
+        <h1>🏫 BMS College of Engineering</h1>
+        <h2 class="subtitle">🎓 Student Performance Analyzer</h2>
 
-        <!-- Add Student Section -->
-        <div class="card">
-            <h2>Add Student</h2>
-
+        <div class="input-card">
+            <h3>Enter Student Marks</h3>
             <input type="text" id="name" placeholder="Student Name">
-            <input type="number" id="maths" placeholder="Maths Marks">
-            <input type="number" id="science" placeholder="Science Marks">
-            <input type="number" id="english" placeholder="English Marks">
-
-            <button onclick="addStudent()">Add Student</button>
+            <input type="number" id="sub1" placeholder="Subject 1 Marks">
+            <input type="number" id="sub2" placeholder="Subject 2 Marks">
+            <input type="number" id="sub3" placeholder="Subject 3 Marks">
+            <button onclick="analyze()">Analyze Performance</button>
         </div>
 
-        <!-- Search Student Section -->
-        <div class="card">
-            <h2>Search Student</h2>
+        <div id="output" class="output-card"></div>
 
-            <input type="text" id="searchName" placeholder="Enter Student Name">
-            <button onclick="searchStudent()">Search</button>
-
-            <div id="result"></div>
-        </div>
-
-        <!-- Class Average Section -->
-        <div class="card">
-            <h2>Class Average</h2>
-            <button onclick="classAverage()">Show Class Average</button>
-            <div id="classAvg"></div>
-        </div>
+        <!-- Bar Chart Canvas -->
+        <canvas id="marksChart" style="margin-top: 20px;"></canvas>
 
     </div>
 
